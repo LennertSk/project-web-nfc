@@ -47,11 +47,13 @@ class LoginController extends Controller
       else {
         $username = $validatedData['username'];
         return view('confirm', ['username' => $username]);
-
+      }
       $cookie_username = cookie('username', $validatedData['username'], 45000);
       return redirect('/')->withCookie($cookie_username);
     }
-    public function confirmform(Request $request) {
+
+    public function confirmform(Request $request)
+    {
       return view('confirm');
     }
 

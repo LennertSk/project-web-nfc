@@ -8,7 +8,7 @@
     <h1>Hey, looks like you are new!</h1>
     @csrf
 
-    <label for="username">What should be call you ?</label>
+    <label for="username">What should we call you ?</label>
     <input id="username" type="text" class="form-login-input @error('username') is-invalid @enderror" name='username' required>
     @error('username')
       <div class="form-login-error">{{ $message }}</div>

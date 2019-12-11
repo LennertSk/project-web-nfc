@@ -1,0 +1,10 @@
+.counters {
+  display: -webkit-box;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.counters button {
+  margin-right: 20px;
+}
+
