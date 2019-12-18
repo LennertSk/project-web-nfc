@@ -68,10 +68,14 @@ class CountController extends Controller
         $username = Cookie::get('username');
         $values = Count::where("username", $username)->get()->first();
 
-        $waterValue = $values->water_value;
-        echo $waterValue;
+        $waterValue = $values->value_water;
+        $totalValue = $values->threshold_water;
 
-        return view("/layout", ["water" => $waterValue]);
+        $percentage = ($waterValue/$totalValue) * 100;
+
+        $calc = -100 + ($percentage/100*80);
+
+        return view("/layout", ["calc" => $calc]);
     }
 
 }

@@ -8,7 +8,7 @@
 			<p class="percentage">57<span>%</span></p>
 		</div>
 		<div class="waves">
-			<img src="images/waves.png" alt="">
+			<img src="images/waves.png" class="waves-img" alt="">
 		</div>
 	</div>
 	<footer>
@@ -19,13 +19,16 @@
 			<hr class="line"></hr>
 			<hr class="line"></hr>
 		</div>
-		@php
-			echo($water);
-		@endphp
+
 	</footer>
 </div>
 <style>
-	
+	.waves-img {
+		@php
+			$prct = strval($calc) . '%';
+		@endphp
+		bottom: {{ $prct }} !important;
+	}
 </style>
 
 @endsection
