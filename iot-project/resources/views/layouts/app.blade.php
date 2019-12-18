@@ -26,7 +26,7 @@
         <!-- Navigation Top Bar  -->
         <nav>
             <div class='nav-main'>
-                <p class="nav-item-p" href='#'>20 Nov 2019</p>
+                <p id="lala" class="nav-item-p" href='#'>20 Nov 2019</p>
                 <p class="nav-item-amount" href='#'>1440 / 2500 ml</p>
             </div>
             <div class='nav-main'>

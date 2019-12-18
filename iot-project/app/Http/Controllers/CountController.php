@@ -64,4 +64,14 @@ class CountController extends Controller
         return view('layout');
     }
 
+    public function changeWater() {
+        $username = Cookie::get('username');
+        $values = Count::where("username", $username)->get()->first();
+
+        $waterValue = $values->water_value;
+        echo $waterValue;
+
+        return view("/layout", ["water" => $waterValue]);
+    }
+
 }
