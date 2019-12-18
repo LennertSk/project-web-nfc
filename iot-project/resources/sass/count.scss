@@ -1,5 +1,15 @@
+$darkblue:  #1A384F;
+$brown: #B99682;
+
+.blue {
+	background-color: $darkblue;
+}
+
+.brown {
+	background-color: $brown;
+}
+
 .container {
-	background-color: #1A384F;
 	max-height: 100vh;
 	overflow: hidden;
 }

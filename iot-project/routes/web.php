@@ -17,10 +17,12 @@ Route::get('/login/confirm', 'LoginController@confirmform');
 Route::get('/login', 'LoginController@form');
 
 Route::get("/show", "CountController@show")->name("show");
-Route::get("/water/{username}", "CountController@countWater")->name("water");
+/*Route::get("/water/{username}", "CountController@countWater")->name("water");
 Route::get("/plants/{username}", "CountController@countPlants")->name("plants");
 Route::get("/coffee/{username}", "CountController@countCoffee")->name("coffee");
 Route::get("/bike/{username}", "CountController@countBike")->name("bike");
+*/
 
-
-Route::get("/layout", "CountController@changeWater");
+Route::get("/water", "CountController@changeWater");
+Route::get("/plants", "CountController@changePlants");
+Route::get("/coffee", "CountController@changeCoffee");

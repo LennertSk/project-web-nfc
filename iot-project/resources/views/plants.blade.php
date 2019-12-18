@@ -5,7 +5,7 @@
 <div class="container">
 	<div class="main-container">
 		<div class="middle-main">
-			<p class="percentage">57<span>%</span></p>
+			<p class="percentage">02<span>Hours ago</span></p>
 		</div>
 		<div class="waves">
 			<img src="images/waves.png" class="waves-img" alt="">
@@ -23,12 +23,6 @@
 	</footer>
 </div>
 <style>
-	.waves-img {
-		@php
-			$prct = strval($calc) . '%';
-		@endphp
-		bottom: {{ $prct }} !important;
-	}
 </style>
 
 @endsection

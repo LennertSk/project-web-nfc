@@ -75,7 +75,24 @@ class CountController extends Controller
 
         $calc = -100 + ($percentage/100*80);
 
-        return view("/layout", ["calc" => $calc]);
+        return view("/water", ["calc" => $calc, "percentage" => $percentage]);
+    }
+
+    public function changePlants() {
+        return view("/plants");
+    }
+
+    public function changeCoffee() {
+        $username = Cookie::get('username');
+        $values = Count::where("username", $username)->get()->first();
+
+        $coffeeValue = $values->value_coffee;
+        $totalValue = $values->threshold_coffee;
+
+        $percentage = ($coffeeValue/$totalValue) * 100;
+        $calc = -100 + ($percentage/100*50);
+
+        return view("/coffee", ["coffeeValue" => $coffeeValue, "totalValue" => $totalValue, "calc" => $calc]);
     }
 
 }
