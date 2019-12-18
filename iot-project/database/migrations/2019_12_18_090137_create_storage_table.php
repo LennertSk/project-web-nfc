@@ -15,8 +15,10 @@ class CreateStorageTable extends Migration
     {
         Schema::create('storage', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('field');
-            $table->integer('daily_value');
+            $table->string('username');
+            $table->string('coffee_value')->nullable();
+            $table->integer('water_value')->nullable();
+            $table->timestamps();
         });
     }
 
