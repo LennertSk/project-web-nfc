@@ -58,4 +58,10 @@ class CountController extends Controller
 
         return redirect('show');
     }
+
+    public function showLayout()
+    {
+        return view('layout');
+    }
+
 }

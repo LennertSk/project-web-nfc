@@ -21,3 +21,6 @@ Route::get("/water/{username}", "CountController@countWater")->name("water");
 Route::get("/plants/{username}", "CountController@countPlants")->name("plants");
 Route::get("/coffee/{username}", "CountController@countCoffee")->name("coffee");
 Route::get("/bike/{username}", "CountController@countBike")->name("bike");
+
+
+Route::get("/layout", "CountController@showLayout");
