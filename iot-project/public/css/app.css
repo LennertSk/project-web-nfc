@@ -6,6 +6,10 @@
   background-color: #B99682;
 }
 
+.green {
+  background-color: #407844;
+}
+
 .container {
   max-height: 100vh;
   overflow: hidden;
@@ -27,13 +31,51 @@
   vertical-align: middle;
   line-height: normal;
   color: #fff;
-  font-size: 140px;
   width: 300px;
   z-index: 3;
 }
 
-.main-container .middle-main span {
-  font-size: 80px;
+.main-container .middle-main .water {
+  font-size: 130px;
+}
+
+.main-container .middle-main .water .side {
+  font-size: 70px;
+}
+
+.main-container .middle-main .coffee {
+  font-size: 130px;
+  line-height: 1;
+}
+
+.main-container .middle-main .coffee .under {
+  display: block;
+}
+
+.main-container .middle-main .coffee .side,
+.main-container .middle-main .coffee .under {
+  font-size: 70px;
+}
+
+.main-container .middle-main .plants {
+  font-size: 120px;
+  line-height: 1;
+}
+
+.main-container .middle-main .plants .above {
+  display: block;
+  font-size: 50px;
+}
+
+.main-container .waves img {
+  z-index: 1;
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -100%;
+  margin: auto;
 }
 
 footer {
@@ -66,17 +108,6 @@ footer .footer-container .line {
 
 footer .footer-container .active {
   background-color: white;
-}
-
-.waves img {
-  z-index: 1;
-  width: 100%;
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -100%;
-  margin: auto;
 }
 
 body {

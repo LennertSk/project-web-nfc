@@ -5,7 +5,7 @@
 <div class="container blue">
 	<div class="main-container">
 		<div class="middle-main">
-			<p class="percentage">{{ $percentage }}<span>%</span></p>
+			<p class="percentage water">{{ $percentage }}<span class="side">%</span></p>
 		</div>
 		<div class="waves">
 			<img src="images/waves.png" class="waves-img" alt="">

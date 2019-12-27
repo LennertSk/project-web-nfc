@@ -1,5 +1,6 @@
 $darkblue:  #1A384F;
 $brown: #B99682;
+$darkgreen: #407844;
 
 .blue {
 	background-color: $darkblue;
@@ -7,6 +8,10 @@ $brown: #B99682;
 
 .brown {
 	background-color: $brown;
+}
+
+.green {
+	background-color: $darkgreen;
 }
 
 .container {
@@ -26,12 +31,48 @@ $brown: #B99682;
 			vertical-align: middle;
 			line-height: normal;
 			color: #fff;
-			font-size: 140px;
 			width: 300px;
 			z-index: 3;
 		}
-		span {
-			font-size: 80px;
+
+		.water {
+			font-size: 130px;
+			.side {
+				font-size: 70px;
+			}
+		}
+
+		.coffee {
+			font-size: 130px;
+			line-height: 1;
+			.under {
+				display: block
+			}
+			.side, .under {
+				font-size: 70px;
+			}
+		}
+
+		.plants {
+			font-size: 120px;
+			line-height: 1;
+			.above {
+				display: block;
+				font-size: 50px;
+			}
+		}
+	}
+
+	.waves {
+		img {
+			z-index: 1;
+			width: 100%;
+	  		display: block;
+	  		position: absolute;
+	  		left: 0;
+	  		right: 0;
+	  		bottom: -100%;
+	  		margin: auto;
 		}
 	}
 }
@@ -60,19 +101,5 @@ footer {
 		.active {
 			background-color: rgba(255,255,255, 1);
 		}
-	}
-}
-
-.waves {
-	
-	img {
-		z-index: 1;
-		width: 100%;
-  		display: block;
-  		position: absolute;
-  		left: 0;
-  		right: 0;
-  		bottom: -100%;
-  		margin: auto;
 	}
 }

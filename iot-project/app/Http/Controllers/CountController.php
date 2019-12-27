@@ -6,6 +6,8 @@ use App\Count;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Cookie;
+use DateTime;
+use Carbon\Carbon;
 
 class CountController extends Controller
 {
@@ -72,14 +74,35 @@ class CountController extends Controller
         $totalValue = $values->threshold_water;
 
         $percentage = ($waterValue/$totalValue) * 100;
-
         $calc = -100 + ($percentage/100*80);
 
         return view("/water", ["calc" => $calc, "percentage" => $percentage]);
     }
 
     public function changePlants() {
-        return view("/plants");
+        $username = Cookie::get('username');
+        $values = Count::where("username", $username)->get()->first();
+
+        // Get Values
+        $lastDate = $values->value_plants;
+        $days = $values->threshold_plants;
+
+        $dbDate = Carbon::parse($lastDate, "CET");
+        $newDate = Carbon::createFromDate($lastDate)->addDay($days);
+        $currentDate = Carbon::now("CET");
+
+        // Calc days and hours
+        if ($currentDate < $newDate) {
+            $diffInHours = $newDate->diffInHours($currentDate);
+        } else {
+            $diffInHours = $newDate->hour - $currentDate->hour;
+        }
+
+        // Get calc -120% (bottom) --> -90% (top)
+        $percentage = ($diffInHours/(24*$days)) * 100;
+        $calc = -90 - ($percentage/100*30);
+
+        return view("/plants", ["hours" => $diffInHours, "calc" => $calc]);
     }
 
     public function changeCoffee() {

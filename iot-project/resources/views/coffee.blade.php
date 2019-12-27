@@ -5,7 +5,7 @@
 <div class="container brown">
 	<div class="main-container">
 		<div class="middle-main">
-			<p class="percentage">{{ $coffeeValue }}<span>/{{ $totalValue }} cups</span></p>
+			<p class="percentage coffee">{{ $coffeeValue }}<span class="side">/{{ $totalValue }}</span><span class="under">cups</span></p>
 		</div>
 		<div class="waves">
 			<img src="images/coffee.png" class="coffee-img" alt="">
