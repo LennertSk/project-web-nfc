@@ -25,3 +25,6 @@ Route::get("/addcoffee", "CountController@addCoffee")->name("addcoffee");
 Route::get("/water", "CountController@changeWater")->name("water");
 Route::get("/plants", "CountController@changePlants")->name("plants");
 Route::get("/coffee", "CountController@changeCoffee")->name("coffee");
+
+Route::get("/settings/update", "SettingsController@update")->name("settingsupdate");
+Route::get("/settings", "SettingsController@index")->name("settings");
