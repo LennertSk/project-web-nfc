@@ -17,12 +17,11 @@ Route::get('/login/confirm', 'LoginController@confirmform');
 Route::get('/login', 'LoginController@form');
 
 Route::get("/show", "CountController@show")->name("show");
-/*Route::get("/water/{username}", "CountController@countWater")->name("water");
-Route::get("/plants/{username}", "CountController@countPlants")->name("plants");
-Route::get("/coffee/{username}", "CountController@countCoffee")->name("coffee");
-Route::get("/bike/{username}", "CountController@countBike")->name("bike");
-*/
+Route::get("/addwater", "CountController@addWater")->name("addwater");
+Route::get("/waterplants", "CountController@waterPlants")->name("waterplants");
+Route::get("/addcoffee", "CountController@addCoffee")->name("addcoffee");
 
-Route::get("/water", "CountController@changeWater");
-Route::get("/plants", "CountController@changePlants");
-Route::get("/coffee", "CountController@changeCoffee");
+
+Route::get("/water", "CountController@changeWater")->name("water");
+Route::get("/plants", "CountController@changePlants")->name("plants");
+Route::get("/coffee", "CountController@changeCoffee")->name("coffee");

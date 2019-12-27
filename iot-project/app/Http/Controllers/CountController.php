@@ -21,50 +21,41 @@ class CountController extends Controller
     	return view("show", ["values" => $values]);
 	}
 
-    public function countWater($username)
+    public function addWater()
     {
+        $username = Cookie::get('username');
         $counter = Count::where("username", $username)->get()->first();
 
-        $counter->threshold_water = $counter->threshold_water + 1;
+        $counter->value_water = $counter->value_water + 250;
         $counter->save();
 
-        return redirect('show');
+        return redirect('water');
     }
 
-    public function countPlants($username)
+    public function waterPlants()
     {
+        $username = Cookie::get('username');
+        $counter = Count::where("username", $username)->get()->first();
+        $currentDate = Carbon::now("CET");
+
+        $counter->value_plants = $currentDate;
+        $counter->save();
+
+        return redirect('plants');
+    }
+
+    public function addCoffee()
+    {
+        $username = Cookie::get('username');
         $counter = Count::where("username", $username)->get()->first();
 
-        $counter->threshold_plants = $counter->threshold_plants + 1;
+        $counter->value_coffee = $counter->value_coffee + 1;
         $counter->save();
 
-        return redirect('show');
+        return redirect('coffee');
     }
 
-    public function countCoffee($username)
-    {
-        $counter = Count::where("username", $username)->get()->first();
 
-        $counter->threshold_coffee = $counter->threshold_coffee + 1;
-        $counter->save();
-
-        return redirect('show');
-    }
-
-    public function countBike($username)
-    {
-        $counter = Count::where("username", $username)->get()->first();
-
-        $counter->threshold_bike = $counter->threshold_bike + 1;
-        $counter->save();
-
-        return redirect('show');
-    }
-
-    public function showLayout()
-    {
-        return view('layout');
-    }
 
     public function changeWater() {
         $username = Cookie::get('username');
@@ -76,7 +67,7 @@ class CountController extends Controller
         $percentage = ($waterValue/$totalValue) * 100;
         $calc = -100 + ($percentage/100*80);
 
-        return view("/water", ["calc" => $calc, "percentage" => $percentage]);
+        return view("/water", ["calc" => $calc, "percentage" => round($percentage)]);
     }
 
     public function changePlants() {
