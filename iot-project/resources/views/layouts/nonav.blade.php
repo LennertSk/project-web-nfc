@@ -24,22 +24,13 @@
 <body>
     <div id="app">
         <!-- Navigation Top Bar  -->
-        <nav>
+        <nav class="relative">
             <div class='nav-main'>
-                
+                <p class="nonav-item-p" href='#'>Settings</p>
             </div>
             <div class='nav-main'>
                 <a class="nav-item-menu" href='#'>
-                    <svg width="30" height="29" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="7.19998" y1="3.10004" x2="18" y2="3.10004" stroke="white"/>
-                        <line y1="8.5" x2="10.8" y2="8.5" stroke="white"/>
-                        <line x1="4.09998" y1="2.18557e-08" x2="4.09998" y2="5.4" stroke="white"/>
-                        <line x1="13.1" y1="5.39996" x2="13.1" y2="10.8" stroke="white"/>
-                        <line y1="3.10001" x2="3.6" y2="3.10001" stroke="white"/>
-                        <line x1="14.4" y1="8.5" x2="18" y2="8.5" stroke="white"/>
-                        <line y1="13.9" x2="9" y2="13.9" stroke="white"/>
-                        <line x1="7.69998" y1="10.8" x2="7.69998" y2="16.2" stroke="white"/>
-                        <line x1="10.8" y1="13.9" x2="18" y2="13.9" stroke="white"/>
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" width="30" height="29"><g><g><path fill="#1A384F" d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z"/></g></g>
                     </svg>
                 </a>
             </div>

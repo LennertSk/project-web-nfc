@@ -20,7 +20,7 @@ nav {
     	flex-direction: column;
     	padding: 20px;
 
-		.nav-item-p, .nav-item-amount, .nav-item-menu{
+		.nav-item-p, .nav-item-amount, .nav-item-menu, .nonav-item-p{
 			text-decoration: none;
 			margin: 0;
 		}
@@ -28,6 +28,11 @@ nav {
 		.nav-item-p {
 			font-size: 20px;
 			color: #fff;
+		}
+
+		.nonav-item-p {
+			font-size: 20px;
+			color: #1A384F;
 		}
 
 		.nav-item-amount {
@@ -40,6 +45,10 @@ nav {
 		}
 	}
 	
+}
+
+.relative {
+	position: relative;
 }
 
 .counters {

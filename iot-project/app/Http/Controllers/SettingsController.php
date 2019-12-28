@@ -18,13 +18,20 @@ class SettingsController extends Controller
         $username = Cookie::get('username');
         $values = Count::where("username", $username)->get()->first();
 
-        $waterValue = $values->value_water;
+        // Change water value
+        $waterValue = $values->threshold_water;
+        $values->threshold_water = $request->rsRangeLineWater;
 
-        $values->threshold_water = $request->rsRangeLine;
-        $totalValue = $values->threshold_water;
+        // Change coffee value
+        $coffeeValue = $values->threshold_coffee;
+        $values->threshold_coffee = $request->rsRangeLineCoffee;
+
+        // Change plants value
+        $plantsValue = $values->threshold_plants;
+        $values->threshold_plants = $request->rsRangeLinePlants;
 
         $values->save();
 
-        return view("/settings");
+        return view("/settings", ["waterValue" => $waterValue, "coffeeValue" => $coffeeValue, "plantsValue" => $plantsValue]);
     }
 }
