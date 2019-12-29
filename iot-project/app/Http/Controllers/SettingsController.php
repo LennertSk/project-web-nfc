@@ -11,7 +11,15 @@ use Illuminate\Support\Facades\Cookie;
 class SettingsController extends Controller
 {
     public function index() {
-        return view("/settings");
+        
+        $username = Cookie::get('username');
+        $values = Count::where("username", $username)->get()->first();
+
+        $waterValue = $values->threshold_water;
+        $coffeeValue = $values->threshold_coffee;
+        $plantsValue = $values->threshold_plants;
+
+        return view("/settings", ["waterValue" => $waterValue, "coffeeValue" => $coffeeValue, "plantsValue" => $plantsValue]);
     }
     public function update(Request $request) {
 

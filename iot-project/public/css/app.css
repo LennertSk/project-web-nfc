@@ -127,11 +127,15 @@ footer .footer-container .active {
   width: 100%;
 }
 
-.slidecontainer form .slider-water {
+.slidecontainer form .slider-water,
+.slidecontainer form .slider-coffee,
+.slidecontainer form .slider-plants {
   padding: 0 20px;
 }
 
-.slidecontainer form .slider-water .slider-info .info-h3 {
+.slidecontainer form .slider-water .slider-info .info-h3,
+.slidecontainer form .slider-coffee .slider-info .info-h3,
+.slidecontainer form .slider-plants .slider-info .info-h3 {
   color: rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
   font-weight: normal;
@@ -139,28 +143,55 @@ footer .footer-container .active {
   margin: 0;
 }
 
-.slidecontainer form .slider-water .slider-info .info-p {
+.slidecontainer form .slider-water .slider-info .info-p,
+.slidecontainer form .slider-coffee .slider-info .info-p,
+.slidecontainer form .slider-plants .slider-info .info-p {
   color: black;
   font-weight: normal;
   font-size: 15px;
   margin: 10px 0 0 0;
 }
 
-.slidecontainer form .slider-water .range-slider {
+.slidecontainer form .slider-water .range-slider,
+.slidecontainer form .slider-coffee .range-slider,
+.slidecontainer form .slider-plants .range-slider {
   padding: 0 20px;
 }
 
-.slidecontainer form .slider-water .range-slider .rs-range {
+.slidecontainer form .slider-water .range-slider .rs-range,
+.slidecontainer form .slider-coffee .range-slider .rs-range,
+.slidecontainer form .slider-plants .range-slider .rs-range {
   margin-top: 15px;
   width: 100%;
   -webkit-appearance: none;
+  border-radius: 8px;
+  height: 10px;
+  outline: none;
+  -webkit-transition: background 450ms ease-in;
+  transition: background 450ms ease-in;
 }
 
-.slidecontainer form .slider-water .range-slider .rs-range:focus {
+.slidecontainer form .slider-water .range-slider .rs-range:focus,
+.slidecontainer form .slider-coffee .range-slider .rs-range:focus,
+.slidecontainer form .slider-plants .range-slider .rs-range:focus {
   outline: none;
 }
 
-.slidecontainer form .slider-water .range-slider .rs-range::-webkit-slider-runnable-track {
+.slidecontainer form .slider-water .range-slider .rs-range::-webkit-slider-runnable-track,
+.slidecontainer form .slider-coffee .range-slider .rs-range::-webkit-slider-runnable-track,
+.slidecontainer form .slider-plants .range-slider .rs-range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  box-shadow: none;
+  background: none;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+
+.slidecontainer form .slider-water .range-slider .rs-range::-moz-range-track,
+.slidecontainer form .slider-coffee .range-slider .rs-range::-moz-range-track,
+.slidecontainer form .slider-plants .range-slider .rs-range::-moz-range-track {
   width: 100%;
   height: 1px;
   cursor: pointer;
@@ -170,17 +201,9 @@ footer .footer-container .active {
   border: 0px solid #010101;
 }
 
-.slidecontainer form .slider-water .range-slider .rs-range::-moz-range-track {
-  width: 100%;
-  height: 1px;
-  cursor: pointer;
-  box-shadow: none;
-  background: #1A384F;
-  border-radius: 0px;
-  border: 0px solid #010101;
-}
-
-.slidecontainer form .slider-water .range-slider .rs-range::-webkit-slider-thumb {
+.slidecontainer form .slider-water .range-slider .rs-range::-webkit-slider-thumb,
+.slidecontainer form .slider-coffee .range-slider .rs-range::-webkit-slider-thumb,
+.slidecontainer form .slider-plants .range-slider .rs-range::-webkit-slider-thumb {
   box-shadow: none;
   border: 0px solid #1A384F;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
@@ -193,7 +216,9 @@ footer .footer-container .active {
   margin-top: -12px;
 }
 
-.slidecontainer form .slider-water .range-slider .rs-range::-moz-range-thumb {
+.slidecontainer form .slider-water .range-slider .rs-range::-moz-range-thumb,
+.slidecontainer form .slider-coffee .range-slider .rs-range::-moz-range-thumb,
+.slidecontainer form .slider-plants .range-slider .rs-range::-moz-range-thumb {
   box-shadow: none;
   border: 0px solid #1A384F;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
@@ -206,11 +231,15 @@ footer .footer-container .active {
   margin-top: -12px;
 }
 
-.slidecontainer form .slider-water .range-slider .rs-range::-moz-focus-outer {
+.slidecontainer form .slider-water .range-slider .rs-range::-moz-focus-outer,
+.slidecontainer form .slider-coffee .range-slider .rs-range::-moz-focus-outer,
+.slidecontainer form .slider-plants .range-slider .rs-range::-moz-focus-outer {
   border: 0;
 }
 
-.slidecontainer form .slider-water .range-slider .rs-label {
+.slidecontainer form .slider-water .range-slider .rs-label,
+.slidecontainer form .slider-coffee .range-slider .rs-label,
+.slidecontainer form .slider-plants .range-slider .rs-label {
   position: relative;
   -webkit-transform-origin: center center;
           transform-origin: center center;
@@ -224,55 +253,28 @@ footer .footer-container .active {
   font-weight: bold;
   padding-top: 4px;
   box-sizing: border-box;
-  border: 2px solid #1A384F;
   margin-top: 20px;
   margin-left: -26px;
+  color: #fff;
   left: attr(value);
-  color: #1A384F;
   font-style: normal;
   font-weight: normal;
   line-height: normal;
   font-size: 18px;
+  line-height: 1;
 }
 
-.slidecontainer form .slider-water .range-slider .rs-label::after {
+.slidecontainer form .slider-water .range-slider .rs-label::after,
+.slidecontainer form .slider-coffee .range-slider .rs-label::after,
+.slidecontainer form .slider-plants .range-slider .rs-label::after {
   font-size: 16px;
   letter-spacing: 0.07em;
   margin-top: -2px;
 }
 
-.slidecontainer form .slider-water .range-slider .rs-water::after {
-  content: "ml";
-}
-
-.slidecontainer form .slider-water .range-slider .rs-coffee::after {
-  content: "/day";
-}
-
-.slidecontainer form .slider-water .range-slider .rs-plants {
-  /*&::before {
-  	content: "Every ";
-  }*/
-}
-
-.slidecontainer form .slider-water .range-slider .rs-plants::after {
-  content: " days";
-}
-
-.slidecontainer form .slider-water .range-slider input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  background-color: #1A384F;
-  margin-top: -8px;
-}
-
-.slidecontainer form .slider-water .range-slider input[type=range]::-webkit-slider-runnable-track {
-  background-color: #CCD7DB;
-  width: 100%;
-  height: 10px;
-  border-radius: 50px;
-}
-
-.slidecontainer form .slider-water .box-minmax {
+.slidecontainer form .slider-water .box-minmax,
+.slidecontainer form .slider-coffee .box-minmax,
+.slidecontainer form .slider-plants .box-minmax {
   margin-top: 10px;
   display: -webkit-box;
   display: flex;
@@ -281,6 +283,80 @@ footer .footer-container .active {
   font-size: 17px;
   color: #1A384F;
   padding: 0 10px;
+}
+
+.slidecontainer form .slider-water .range-slider input[type=range]::-webkit-slider-thumb {
+  background-color: #1A384F;
+}
+
+.slidecontainer form .slider-water .range-slider .rs-range {
+  background: -webkit-gradient(linear, left top, right top, from(#1A384F), color-stop(50%, #1A384F), color-stop(50%, #CCD7DB), to(#CCD7DB));
+  background: linear-gradient(to right, #1A384F 0%, #1A384F 50%, #CCD7DB 50%, #CCD7DB 100%);
+}
+
+.slidecontainer form .slider-water .range-slider .rs-water {
+  border: 2px solid #1BBDF6;
+  background-color: #1BBDF6;
+}
+
+.slidecontainer form .slider-water .range-slider .rs-water::after {
+  content: "ml";
+}
+
+.slidecontainer form .slider-coffee .range-slider input[type=range]::-webkit-slider-thumb {
+  background-color: #57403E;
+}
+
+.slidecontainer form .slider-coffee .range-slider .rs-range {
+  background: -webkit-gradient(linear, left top, right top, from(#B99682), color-stop(50%, #B99682), color-stop(50%, #CCD7DB), to(#CCD7DB));
+  background: linear-gradient(to right, #B99682 0%, #B99682 50%, #CCD7DB 50%, #CCD7DB 100%);
+}
+
+.slidecontainer form .slider-coffee .range-slider .rs-coffee {
+  border: 2px solid #B99682;
+  background-color: #B99682;
+}
+
+.slidecontainer form .slider-coffee .range-slider .rs-coffee::after {
+  content: "/day";
+}
+
+.slidecontainer form .slider-plants .range-slider input[type=range]::-webkit-slider-thumb {
+  background-color: #407844;
+}
+
+.slidecontainer form .slider-plants .range-slider .rs-range {
+  background: -webkit-gradient(linear, left top, right top, from(#407844), color-stop(50%, #407844), color-stop(50%, #CCD7DB), to(#CCD7DB));
+  background: linear-gradient(to right, #407844 0%, #407844 50%, #CCD7DB 50%, #CCD7DB 100%);
+}
+
+.slidecontainer form .slider-plants .range-slider .rs-plants {
+  border: 2px solid #5AAB61;
+  background-color: #5AAB61;
+  /*&::before {
+  	content: "Every ";
+  }*/
+}
+
+.slidecontainer form .slider-plants .range-slider .rs-plants::after {
+  content: " days";
+}
+
+.slidecontainer form .btn-settings {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.slidecontainer form .btn-settings .update-btn {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #1A384F;
+  border: 4px solid #1A384F;
+  border-radius: 10px;
+  border-radius: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
 }
 
 body {
@@ -308,7 +384,7 @@ nav .nav-main {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
-  padding: 20px;
+  padding: 15px;
 }
 
 nav .nav-main .nav-item-p,

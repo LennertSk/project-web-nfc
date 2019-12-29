@@ -1,5 +1,8 @@
 $darkblue:  #1A384F;
+$lightblue: #1BBDF6;
 $brown: #B99682;
+$darkbrown: #57403E;
+$lightgreen: #5AAB61;
 $darkgreen: #407844;
 
 .blue {
@@ -118,7 +121,7 @@ footer {
     form {
     	width: 100%;
 
-    	.slider-water {
+    	.slider-water, .slider-coffee, .slider-plants {
     		padding: 0 20px;
 
     		.slider-info {
@@ -144,6 +147,10 @@ footer {
 				    margin-top: 15px;
 				    width: 100%;
 				    -webkit-appearance: none;
+					border-radius: 8px;
+					height: 10px;
+					outline: none;
+					transition: background 450ms ease-in;
 				    &:focus {
 				        outline: none;
 				    }
@@ -152,7 +159,7 @@ footer {
 				        height: 1px;
 				        cursor: pointer;
 				        box-shadow: none;
-				        background: $darkblue;
+				        background: none;
 				        border-radius: 0px;
 				        border: 0px solid #010101;
 				    }
@@ -195,7 +202,6 @@ footer {
 				    }
 				}
 				.rs-label {
-				    
 				    position: relative;
 				    transform-origin: center center;
 				    display: block;
@@ -208,58 +214,22 @@ footer {
 				    font-weight: bold;
 				    padding-top: 4px;
 				    box-sizing: border-box;
-				    border: 2px solid $darkblue;
 				    margin-top: 20px;
 				    margin-left: -26px;
+				    color: #fff;
 				    left: attr(value);
-				    color: $darkblue;
 				    font-style: normal;
 				    font-weight: normal;
 				    line-height: normal;
 				    font-size: 18px;
+				    line-height: 1;
 				    &::after {
 				        font-size: 16px;
 				        letter-spacing: 0.07em;
 				        margin-top: -2px;
 				    } 
 				}
-
-				.rs-water {
-					&::after {
-						content: "ml";
-					}
-				}
-
-				.rs-coffee {
-					&::after {
-						content: "/day";
-					}
-				}
-
-				.rs-plants {
-					&::after {
-						content: " days";
-					}
-					/*&::before {
-						content: "Every ";
-					}*/
-				}
-
-
-				input[type=range]::-webkit-slider-thumb {
-					-webkit-appearance: none;
-					background-color: $darkblue;
-					margin-top: -8px;
-				}
-
-				input[type=range]::-webkit-slider-runnable-track {
-				  	background-color: #CCD7DB;
-					width: 100%;
-					height: 10px;
-					border-radius: 50px;
-				}
     		}
-
     		.box-minmax{
 			  margin-top: 10px;
 			  display: flex;
@@ -268,6 +238,77 @@ footer {
 			  color: $darkblue;
 			  padding: 0 10px;
 			}
+    	}
+		.slider-water {
+    		.range-slider {
+				input[type=range]::-webkit-slider-thumb {
+					background-color: $darkblue;
+				}
+				.rs-range {
+					background: linear-gradient(to right, $darkblue  0%, $darkblue 50%, #CCD7DB 50%, #CCD7DB 100%);
+				}
+				.rs-water {
+					border: 2px solid $lightblue;
+					background-color: $lightblue;
+					&::after {
+						content: "ml";
+					}
+				}
+			}
+    	}
+
+    	.slider-coffee {
+    		.range-slider {
+				input[type=range]::-webkit-slider-thumb {
+					background-color: $darkbrown;
+				}
+				.rs-range {
+					background: linear-gradient(to right, $brown  0%, $brown 50%, #CCD7DB 50%, #CCD7DB 100%);
+				}
+				.rs-coffee {
+					border: 2px solid $brown;
+					background-color: $brown;
+					&::after {
+						content: "/day";
+					}
+				}
+			}
+    	}
+    	.slider-plants {
+    		.range-slider {
+				input[type=range]::-webkit-slider-thumb {
+					background-color: $darkgreen;
+				}
+				.rs-range {
+					background: linear-gradient(to right, $darkgreen  0%, $darkgreen 50%, #CCD7DB 50%, #CCD7DB 100%);
+				}
+				.rs-plants {
+					border: 2px solid $lightgreen;
+					background-color: $lightgreen;
+					&::after {
+						content: " days";
+					}
+					/*&::before {
+						content: "Every ";
+					}*/
+				}
+			}
+    	}
+    	.btn-settings {
+    		margin: 0 auto;
+    		width: 50%;
+
+    		.update-btn {
+				width: 100%;
+    			padding: 10px 20px;
+    			background-color: transparent;
+    			color: $darkblue;
+    			border: 4px solid $darkblue;
+    			border-radius: 10px;
+    			border-radius: 10px;
+    			font-family: 'Open Sans', sans-serif;
+    			font-size: 16px;
+    		}
     	}
     }
 }
