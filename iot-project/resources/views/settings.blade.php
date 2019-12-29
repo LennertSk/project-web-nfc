@@ -112,12 +112,12 @@
 		plantsSlider.style.background = 'linear-gradient(to right, #5AAB61 0px, #5AAB61 ' + bullet + 'px, #CCD7DB ' + (bullet+11) + 'px, #CCD7DB '+ (plantsWidth-11) +'px)';
 	}
 
-	window.onload = function() {
-	    if(!window.location.hash) {
-	        window.location = window.location + '#loaded';
-	        window.location.reload();
-	    }
-	}
+	// window.onload = function() {
+	//     if(!window.location.hash) {
+	//         window.location = window.location + '#loaded';
+	//         window.location.reload();
+	//     }
+	// }
 </script>
 
 @endsection

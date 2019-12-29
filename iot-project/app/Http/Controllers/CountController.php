@@ -11,63 +11,61 @@ use Carbon\Carbon;
 
 class CountController extends Controller
 {
-    //
 
     public function show() {
-
     	$username = Cookie::get('username');
-
         $values = DB::table("users")->where("username", $username)->get();
     	return view("show", ["values" => $values]);
 	}
 
+    // ******* Methodes voor +1 te doen *******
+
+    // Add +1 Water
     public function addWater()
     {
         $username = Cookie::get('username');
         $counter = Count::where("username", $username)->get()->first();
-
         $counter->value_water = $counter->value_water + 250;
         $counter->save();
 
         return redirect('water');
     }
 
+    // Add +1 Plants
     public function waterPlants()
     {
         $username = Cookie::get('username');
         $counter = Count::where("username", $username)->get()->first();
         $currentDate = Carbon::now("CET");
-
         $counter->value_plants = $currentDate;
         $counter->save();
-
         return redirect('plants');
     }
 
+    // Add +1 Coffee
     public function addCoffee()
     {
         $username = Cookie::get('username');
         $counter = Count::where("username", $username)->get()->first();
-
         $counter->value_coffee = $counter->value_coffee + 1;
         $counter->save();
-
         return redirect('coffee');
     }
 
-
+    // ******* Methodes om data te weergeven *******
 
     public function changeWater() {
         $username = Cookie::get('username');
         $values = Count::where("username", $username)->get()->first();
 
-        $waterValue = $values->value_water;
+        $userValue = $values->value_water;
         $totalValue = $values->threshold_water;
 
-        $percentage = ($waterValue/$totalValue) * 100;
+        $percentage = ($userValue/$totalValue) * 100;
         $calc = -100 + ($percentage/100*80);
 
-        return view("/water", ["calc" => $calc, "percentage" => round($percentage)]);
+        $valueDisplayedInNav = $userValue . ' / ' . $totalValue . ' ml';
+        return view("/water", ["calc" => $calc, "percentage" => round($percentage), "valueNav" => $valueDisplayedInNav]);
     }
 
     public function changePlants() {
@@ -93,7 +91,8 @@ class CountController extends Controller
         $percentage = ($diffInHours/(24*$days)) * 100;
         $calc = -90 - ($percentage/100*30);
 
-        return view("/plants", ["hours" => $diffInHours, "calc" => $calc]);
+        $valueDisplayedInNav = 'Last watered ' . $lastDate;
+        return view("/plants", ["hours" => $diffInHours, "calc" => $calc, "valueNav" => $valueDisplayedInNav]);
     }
 
     public function changeCoffee() {
@@ -106,7 +105,11 @@ class CountController extends Controller
         $percentage = ($coffeeValue/$totalValue) * 100;
         $calc = -100 + ($percentage/100*50);
 
-        return view("/coffee", ["coffeeValue" => $coffeeValue, "totalValue" => $totalValue, "calc" => $calc]);
+        $valueDisplayedInNav = 'Error getting data';
+        if ( $coffeeValue == 1 ) { $valueDisplayedInNav = $coffeeValue . ' cup consumed today'; }
+        else { $valueDisplayedInNav = $coffeeValue . ' cups consumed today'; }
+        
+        return view("/coffee", ["userValue" => $coffeeValue, "totalValue" => $totalValue, "calc" => $calc, "valueNav" => $valueDisplayedInNav]);
     }
 
 }

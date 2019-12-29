@@ -26,11 +26,13 @@
         <!-- Navigation Top Bar  -->
         <nav>
             <div class='nav-main'>
-                <p id="lala" class="nav-item-p" href='#'>20 Nov 2019</p>
-                <p class="nav-item-amount" href='#'>1440 / 2500 ml</p>
+                <p id="lala" class="nav-item-p" href='#'>{{date('d M Y')}}</p>
+                <p class="nav-item-amount" href='#'>
+                    {{$valueNav}}
+                </p>
             </div>
             <div class='nav-main'>
-                <a class="nav-item-menu" href='#'>
+                <a class="nav-item-menu" href='settings'>
                     <svg width="30" height="29" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line x1="7.19998" y1="3.10004" x2="18" y2="3.10004" stroke="white"/>
                         <line y1="8.5" x2="10.8" y2="8.5" stroke="white"/>

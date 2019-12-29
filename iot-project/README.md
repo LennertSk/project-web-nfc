@@ -1,5 +1,17 @@
 # Ping-a-Cup
 
+## What's left to do?
+
+- [ ] Login page stylen
+- [ ] Login Page werkende krijgen
+- [ ] Nav btn fixen
+
+
+
+
+- [x] Correcte datum laten zien in top-nav
+
+
 ## Links
 
 **Figma:** https://www.figma.com/file/cyCT9KPyfC7DfQAkAVOGT0/Ping-a-Cup?node-id=0%3A1
