@@ -14,10 +14,9 @@
 	<footer>
 		<div class="footer-container">
 			<hr class="line"></hr>
+			<hr class="line"></hr>
+			<hr class="line"></hr>
 			<hr class="line active"></hr>
-			<hr class="line"></hr>
-			<hr class="line"></hr>
-			<hr class="line"></hr>
 		</div>
 
 	</footer>

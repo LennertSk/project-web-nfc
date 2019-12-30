@@ -86,6 +86,7 @@ footer {
 }
 
 footer .footer-container {
+  margin-top: 20px;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: horizontal;
@@ -464,12 +465,14 @@ nav .nav-main .nav-item-menu {
   background: #fff;
   border: 1px solid #8AA692;
   padding: 10px;
-}
-
-.container-home .home-btn a {
   color: #8AA692;
   text-decoration: none;
-  padding: 10px;
+  display: block;
+}
+
+.value-link-wrapper {
+  color: #fff;
+  text-decoration: none;
 }
 
 .container-dashboard {
@@ -518,6 +521,7 @@ nav .nav-main .nav-item-menu {
 
 .container-dashboard .btn-group {
   padding: 0;
+  padding-bottom: 50px;
 }
 
 .container-dashboard .btn-group li {

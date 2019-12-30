@@ -13,11 +13,10 @@
 	</div>
 	<footer>
 		<div class="footer-container">
-			<hr class="line active"></hr>
-			<hr class="line"></hr>
-			<hr class="line"></hr>
-			<hr class="line"></hr>
-			<hr class="line"></hr>
+			<hr class="line">
+			<hr class="line active">
+			<hr class="line">
+			<hr class="line">
 		</div>
 
 	</footer>

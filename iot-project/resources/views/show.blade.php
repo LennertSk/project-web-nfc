@@ -8,6 +8,7 @@
 			<h1>Dashboard</h1>
 		</div>
 		@foreach($values as $value)
+		<a class='value-link-wrapper' href="{{ route('water') }}">
 			<div class="dashboard-value-water">
 				<p class="value-header">Water Score</p>
 				<p>
@@ -18,6 +19,8 @@
 					@endif
 				</p>
 			</div>
+		</a>
+		<a class='value-link-wrapper' href="{{ route('plants') }}">
 			<div class="dashboard-value-plants"> 
 				<p class="value-header">Plants Score</p>
 				<p>
@@ -28,6 +31,8 @@
 					@endif
 				</p>
 			</div>
+		</a>
+		<a class='value-link-wrapper' href="{{ route('coffee') }}">
 			<div class="dashboard-value-coffee">
 				<p class="value-header">Coffee Score</p>
 				<p>
@@ -38,6 +43,7 @@
 					@endif
 				</p>
 			</div>
+		</a>
 		@endforeach
 		<div class="dashboard-bnts">
 			<h2 id='bnt-group-header'>Add manually</h2>
@@ -46,9 +52,6 @@
 				<li><a id='btn-plants' href="{{ route('waterplants') }}">+</a></li>
 				<li><a id='btn-coffee' href="{{ route('addcoffee') }}">+</a></li>
 			</ul>
-			
-			
-			
 		</div>
 	</div>
 </div>

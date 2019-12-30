@@ -93,17 +93,16 @@ nav {
 		background:#fff;
 		border: 1px solid #8AA692;
 		padding: 10px;
-		a {
-
-			color: #8AA692;
-			text-decoration: none;
-			padding: 10px;
-
-		}
+		color: #8AA692;
+		text-decoration: none;
+		display: block;
 	}
 }
 // Dashboard Screen 
-
+.value-link-wrapper {
+	color: #fff;
+	text-decoration: none;
+}
 .container-dashboard {
 	background: #DB9864;
 	height: 100vh;
@@ -143,6 +142,7 @@ nav {
 	}
 	.btn-group {
 		padding: 0;
+		padding-bottom: 50px;
 	}
 	.btn-group li {
 		display: inline;

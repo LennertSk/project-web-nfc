@@ -9,7 +9,7 @@
 		  <p> You are logged in as:</p>
 		  <p class='home-username'>{{$username}}</p>
 		  <p class='home-logout'><a href="{{ url('logout') }}">This is not me!</a></p>
-		  <p class='home-btn'><a href="{{ route('show') }}">Continue</a></p>
+		  <a class='home-btn' href="{{ route('show') }}">Continue</a>
 	</div> 
 </div>
 @endsection
