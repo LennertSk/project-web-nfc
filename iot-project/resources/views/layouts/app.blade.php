@@ -28,7 +28,9 @@
             <div class='nav-main'>
                 <p id="lala" class="nav-item-p" href='#'>{{date('d M Y')}}</p>
                 <p class="nav-item-amount" href='#'>
-                    {{$valueNav}}
+                    @if (isset($valueNav))   
+                        {{$valueNav}} 
+                    @endif
                 </p>
             </div>
             <div class='nav-main'>

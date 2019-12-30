@@ -15,6 +15,8 @@ Route::get('/', 'IndexController@index');
 Route::post('/login/check', 'LoginController@index');
 Route::get('/login/confirm', 'LoginController@confirmform');
 Route::get('/login', 'LoginController@form');
+Route::get('/logout', 'LoginController@logout');
+
 
 Route::get("/show", "CountController@show")->name("show");
 Route::get("/addwater", "CountController@addWater")->name("addwater");

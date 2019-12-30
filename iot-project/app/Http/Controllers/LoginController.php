@@ -21,6 +21,14 @@ class LoginController extends Controller
         return view('login');
     }
 
+    public function logout(){
+
+
+
+      $cookie = \Cookie::forget('username');
+      return redirect('/')->withCookie($cookie);
+    }
+
     /**
      * Store a new blog post.
      *

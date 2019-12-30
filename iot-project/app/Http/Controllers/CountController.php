@@ -64,6 +64,7 @@ class CountController extends Controller
         $percentage = ($userValue/$totalValue) * 100;
         $calc = -100 + ($percentage/100*80);
 
+        $valueDisplayedInNav = 'Error getting data';
         $valueDisplayedInNav = $userValue . ' / ' . $totalValue . ' ml';
         return view("/water", ["calc" => $calc, "percentage" => round($percentage), "valueNav" => $valueDisplayedInNav]);
     }
@@ -91,6 +92,7 @@ class CountController extends Controller
         $percentage = ($diffInHours/(24*$days)) * 100;
         $calc = -90 - ($percentage/100*30);
 
+        $valueDisplayedInNav = 'Error getting data';
         $valueDisplayedInNav = 'Last watered ' . $lastDate;
         return view("/plants", ["hours" => $diffInHours, "calc" => $calc, "valueNav" => $valueDisplayedInNav]);
     }

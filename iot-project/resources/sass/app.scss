@@ -59,3 +59,47 @@ nav {
     	margin-right: 20px;
     }
 }
+
+
+
+// Index Screen ( after login )
+.container-home {
+	background: #8AA692;
+	height: 100vh;
+	.wrapper-home {
+		padding-top: 100px;
+		width: 80%;
+		text-align: center;
+		margin: auto;
+		color: #fff;
+	}
+	.home-username {
+		width: 50%;
+		margin: auto;
+		padding: 10px;
+		border: 1px solid #fff;
+		margin-bottom: 20px;
+	}
+	.home-logout {
+		margin-bottom: 80px;
+		a { 
+			color: #fff; 
+			text-decoration: none;
+		}
+	}
+	.home-btn {
+		width: 50%;
+		margin: auto;
+		background:#fff;
+		border: 1px solid #8AA692;
+		padding: 10px;
+		a {
+
+			color: #8AA692;
+			text-decoration: none;
+			padding: 10px;
+
+		}
+	}
+
+}
