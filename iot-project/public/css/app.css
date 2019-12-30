@@ -472,3 +472,72 @@ nav .nav-main .nav-item-menu {
   padding: 10px;
 }
 
+.container-dashboard {
+  background: #DB9864;
+  height: 100vh;
+}
+
+.container-dashboard .wrapper-main {
+  padding-top: 40px;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  color: #fff;
+}
+
+.container-dashboard .value-header {
+  text-transform: uppercase;
+}
+
+.container-dashboard .dashboard-bnts a {
+  padding: 10px;
+  text-decoration: none;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  color: #f5f5f5;
+  font-weight: bold;
+}
+
+.container-dashboard .dashboard-value-water {
+  background: #1A384F;
+  padding: 30px;
+}
+
+.container-dashboard .dashboard-value-plants {
+  background: #407844;
+  padding: 30px;
+}
+
+.container-dashboard .dashboard-value-coffee {
+  background: #57403E;
+  padding: 30px;
+}
+
+.container-dashboard .btn-group {
+  padding: 0;
+}
+
+.container-dashboard .btn-group li {
+  display: inline;
+  margin: 25px;
+}
+
+.container-dashboard #bnt-group-header {
+  padding-bottom: 20px;
+}
+
+.container-dashboard #btn-water {
+  background: #1A384F;
+}
+
+.container-dashboard #btn-coffee {
+  background: #57403E;
+}
+
+.container-dashboard #btn-plants {
+  background: #407844;
+}
+

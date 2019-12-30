@@ -101,5 +101,56 @@ nav {
 
 		}
 	}
+}
+// Dashboard Screen 
+
+.container-dashboard {
+	background: #DB9864;
+	height: 100vh;
+
+	.wrapper-main {
+		padding-top: 40px;
+		width: 100%;
+		text-align: center;
+		margin: auto;
+		color: #fff;
+	}
+	.value-header {
+		text-transform: uppercase;
+	}
+	.dashboard-bnts a {
+		padding: 10px;
+		text-decoration: none;
+		display: inline-block;
+		width:20px;
+		height:20px;
+		line-height:20px;
+		border-radius: 50%;
+		color:#f5f5f5;
+		font-weight:bold;
+	}
+	.dashboard-value-water {
+		background: #1A384F;
+		padding: 30px;
+	}
+	.dashboard-value-plants {
+		background: #407844;
+		padding: 30px;
+	}
+	.dashboard-value-coffee {
+		background: #57403E;
+		padding: 30px;
+	}
+	.btn-group {
+		padding: 0;
+	}
+	.btn-group li {
+		display: inline;
+		margin: 25px;
+	}
+	#bnt-group-header { padding-bottom: 20px; }
+	#btn-water { background: #1A384F;}
+	#btn-coffee { background: #57403E; }
+	#btn-plants { background: #407844; }
 
 }
