@@ -17,6 +17,7 @@
 			<hr class="line"></hr>
 			<hr class="line"></hr>
 			<hr class="line active"></hr>
+			
 		</div>
 
 	</footer>
