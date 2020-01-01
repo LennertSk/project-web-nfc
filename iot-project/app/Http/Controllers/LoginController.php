@@ -22,9 +22,6 @@ class LoginController extends Controller
     }
 
     public function logout(){
-
-
-
       $cookie = \Cookie::forget('username');
       return redirect('/')->withCookie($cookie);
     }
@@ -39,25 +36,41 @@ class LoginController extends Controller
     {
       // Validate Input
       $validatedData = $request->validate([
-      'username' => 'required|max:255|min:4'
+        'username' => 'required|max:255|min:4'
       ]);
 
-      // Check if username is in db
+      // Pull input from db -> is username not found -> return null
       $username_check = User::where('username', $validatedData['username'])->first();
 
-      // If username is unique -> Add to db & Set Cookie
-      if (is_null($username_check)) {
-        $new_user = new User;
-        $new_user->username = $validatedData['username'];
-        $new_user->save();
-      }
-      // If username is already in db -> ask is user is sure
-      else {
-        $username = $validatedData['username'];
-        return view('confirm', ['username' => $username]);
-      }
-      $cookie_username = cookie('username', $validatedData['username'], 45000);
-      return redirect('/')->withCookie($cookie_username);
+      // Execute logic 
+      switch ($request->input('action')) {
+        case 'login':
+          // LOGIN: Check if username exists in db
+          if (is_null($username_check)) {
+            $error = "Username not found! Please try again.";
+            return view('welcome', ['error' => $error]);
+          }
+          $cookie_username = cookie('username', $validatedData['username'], 45000);
+          return redirect('/')->withCookie($cookie_username);
+          break;
+        case 'register':
+          // REGISTER: If username is unique -> Add to db & Set Cookie
+          if (is_null($username_check)) {
+            $new_user = new User;
+            $new_user->username = $validatedData['username'];
+            $new_user->save();
+          }
+          // If username is already in db -> Send back w/ error message
+          else {
+            $username = $validatedData['username'];
+            $error = "This username (" .$validatedData['username'] . ") is already taken. Please try another one.";
+            return view('welcome', ['error' => $error]);
+          }
+          $cookie_username = cookie('username', $validatedData['username'], 45000);
+          $isNewUser = true;
+          return redirect('/')->withCookie($cookie_username);
+          break;
+      }    
     }
 
     public function confirmform(Request $request)
@@ -70,5 +83,9 @@ class LoginController extends Controller
       // user confirmed account belongs to him -> set cookie and reroute
 
       return redirect('/');
+    }
+
+    public function prelogin(){
+      return view('welcome');
     }
 }

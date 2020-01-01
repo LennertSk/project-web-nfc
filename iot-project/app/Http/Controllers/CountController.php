@@ -12,10 +12,10 @@ use Carbon\Carbon;
 class CountController extends Controller
 {
 
-    public function show() {
+    public function dashboard() {
     	$username = Cookie::get('username');
         $values = DB::table("users")->where("username", $username)->get();
-    	return view("show", ["values" => $values]);
+    	return view("index", ["values" => $values]);
 	}
 
     // ******* Methodes voor +1 te doen *******

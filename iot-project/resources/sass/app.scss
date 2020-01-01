@@ -104,7 +104,7 @@ nav {
 	text-decoration: none;
 }
 .container-dashboard {
-	background: #DB9864;
+	background: #93BDAB;
 	height: 100vh;
 
 	.wrapper-main {
@@ -129,16 +129,22 @@ nav {
 		font-weight:bold;
 	}
 	.dashboard-value-water {
-		background: #1A384F;
-		padding: 30px;
+		p {
+			color: #1A384F;
+		}
+		padding: 15px;
 	}
 	.dashboard-value-plants {
-		background: #407844;
-		padding: 30px;
+		p {
+			color: #407844;
+		}
+		padding: 15px;
 	}
 	.dashboard-value-coffee {
-		background: #57403E;
-		padding: 30px;
+		p {
+			color: #57403E;
+		}
+		padding: 15px;
 	}
 	.btn-group {
 		padding: 0;
@@ -153,4 +159,31 @@ nav {
 	#btn-coffee { background: #57403E; }
 	#btn-plants { background: #407844; }
 
+}
+
+// Login Form ( WELCOME.BLADE )
+.container-welcome {
+	background: #415948;
+
+}
+.submit-btn {
+	width: 60%;
+	margin: auto;
+	background:#fff;
+	border: 1px solid #415948;
+	padding: 10px;
+	color: #415948;
+	text-decoration: none;
+	display: block;
+	margin-top: 20px;
+}
+.login-input-field {
+	width: 80%;
+	padding: 10px;
+	border: none;
+	text-align: center;
+	margin-top: 20px;
+	color: #415948;
+	font-weight: bold;
+	margin-bottom: 20px;
 }

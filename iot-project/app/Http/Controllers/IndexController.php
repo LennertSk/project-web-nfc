@@ -15,12 +15,12 @@ class IndexController extends Controller
 
     // If: No username set -> Ask user for username in login.blade.php
     if (is_null($username_cookie)) {
-      return redirect('login');
+      return redirect('welcome');
     }
     // If: Username is set -> Load user data and continue to page
     else {
       $current_date = Carbon::now();
-      return view('index', ['current_date' => $current_date, 'username' => $username_cookie]);
+      return view('confirm', ['current_date' => $current_date, 'username' => $username_cookie]);
     }
   }
 }

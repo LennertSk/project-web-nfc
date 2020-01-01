@@ -476,7 +476,7 @@ nav .nav-main .nav-item-menu {
 }
 
 .container-dashboard {
-  background: #DB9864;
+  background: #93BDAB;
   height: 100vh;
 }
 
@@ -505,18 +505,27 @@ nav .nav-main .nav-item-menu {
 }
 
 .container-dashboard .dashboard-value-water {
-  background: #1A384F;
-  padding: 30px;
+  padding: 15px;
+}
+
+.container-dashboard .dashboard-value-water p {
+  color: #1A384F;
 }
 
 .container-dashboard .dashboard-value-plants {
-  background: #407844;
-  padding: 30px;
+  padding: 15px;
+}
+
+.container-dashboard .dashboard-value-plants p {
+  color: #407844;
 }
 
 .container-dashboard .dashboard-value-coffee {
-  background: #57403E;
-  padding: 30px;
+  padding: 15px;
+}
+
+.container-dashboard .dashboard-value-coffee p {
+  color: #57403E;
 }
 
 .container-dashboard .btn-group {
@@ -543,5 +552,32 @@ nav .nav-main .nav-item-menu {
 
 .container-dashboard #btn-plants {
   background: #407844;
+}
+
+.container-welcome {
+  background: #415948;
+}
+
+.submit-btn {
+  width: 60%;
+  margin: auto;
+  background: #fff;
+  border: 1px solid #415948;
+  padding: 10px;
+  color: #415948;
+  text-decoration: none;
+  display: block;
+  margin-top: 20px;
+}
+
+.login-input-field {
+  width: 80%;
+  padding: 10px;
+  border: none;
+  text-align: center;
+  margin-top: 20px;
+  color: #415948;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 

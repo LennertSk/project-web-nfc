@@ -5,7 +5,7 @@
 <div class="container container-login">
   <form method="POST" action="{{ url('login/check') }}" class="form-login">
 
-    <h1>Hey, looks like you are new!</h1>
+    <h1>Welcome! Or we lost a cookie along the way</h1>
     @csrf
 
     <label for="username">What should we call you ?</label>

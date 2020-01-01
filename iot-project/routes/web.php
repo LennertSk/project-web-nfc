@@ -12,13 +12,15 @@
 */
 Route::get('/', 'IndexController@index');
 
+
 Route::post('/login/check', 'LoginController@index');
 Route::get('/login/confirm', 'LoginController@confirmform');
 Route::get('/login', 'LoginController@form');
+Route::get('/welcome', 'LoginController@prelogin');
 Route::get('/logout', 'LoginController@logout');
 
 
-Route::get("/show", "CountController@show")->name("show");
+Route::get("/dashboard", "CountController@dashboard")->name("dashboard");
 Route::get("/addwater", "CountController@addWater")->name("addwater");
 Route::get("/waterplants", "CountController@waterPlants")->name("waterplants");
 Route::get("/addcoffee", "CountController@addCoffee")->name("addcoffee");
