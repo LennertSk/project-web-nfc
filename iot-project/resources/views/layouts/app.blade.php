@@ -34,6 +34,7 @@
                 </p>
             </div>
             <div class='nav-main'>
+                @if (!isset($hideSettings))   
                 <a class="nav-item-menu" href='settings'>
                     <svg width="30" height="29" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line x1="7.19998" y1="3.10004" x2="18" y2="3.10004" stroke="white"/>
@@ -47,6 +48,7 @@
                         <line x1="10.8" y1="13.9" x2="18" y2="13.9" stroke="white"/>
                     </svg>
                 </a>
+                @endif
             </div>
         </nav>
 

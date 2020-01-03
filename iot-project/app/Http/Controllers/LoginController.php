@@ -86,6 +86,7 @@ class LoginController extends Controller
     }
 
     public function prelogin(){
-      return view('welcome');
+      $error = null;
+      return view('welcome', ['error' => $error, 'hideSettings' => true]);
     }
 }
