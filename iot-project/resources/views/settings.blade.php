@@ -2,6 +2,7 @@
 
 @section('content')
 
+
 <div class="container">
 	<div class="slidecontainer">
 		<form action="{{ url('settings/update') }}">

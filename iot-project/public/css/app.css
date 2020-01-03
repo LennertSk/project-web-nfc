@@ -531,11 +531,17 @@ nav .nav-main .nav-item-menu {
 .container-dashboard .btn-group {
   padding: 0;
   padding-bottom: 50px;
+  z-index: 15;
 }
 
 .container-dashboard .btn-group li {
   display: inline;
   margin: 25px;
+  z-index: 15;
+}
+
+.container-dashboard .btn-group li a {
+  z-index: 15;
 }
 
 .container-dashboard #bnt-group-header {
@@ -579,5 +585,21 @@ nav .nav-main .nav-item-menu {
   color: #415948;
   font-weight: bold;
   margin-bottom: 20px;
+}
+
+.go-left,
+.go-right {
+  position: absolute;
+  height: 100vh;
+  width: 20vw;
+  z-index: 5;
+}
+
+.go-right {
+  right: 0px;
+}
+
+.go-left {
+  left: 0px;
 }
 

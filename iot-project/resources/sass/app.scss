@@ -149,10 +149,15 @@ nav {
 	.btn-group {
 		padding: 0;
 		padding-bottom: 50px;
+		z-index: 15;
 	}
 	.btn-group li {
 		display: inline;
 		margin: 25px;
+		z-index: 15;
+	}
+	.btn-group li a {
+		z-index: 15;
 	}
 	#bnt-group-header { padding-bottom: 20px; }
 	#btn-water { background: #1A384F;}
@@ -186,4 +191,19 @@ nav {
 	color: #415948;
 	font-weight: bold;
 	margin-bottom: 20px;
+}
+
+// Side Navigation
+
+.go-left, .go-right {
+	position: absolute;
+	height: 100vh;
+	width: 20vw;
+	z-index: 5;
+}
+.go-right {
+	right: 0px;
+}
+.go-left {
+	left: 0px;
 }

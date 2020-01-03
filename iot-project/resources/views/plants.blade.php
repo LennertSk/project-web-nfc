@@ -2,6 +2,9 @@
 
 @section('content')
 
+<a href='{{ route("water") }}' class='go-left'></a>
+<a href='{{ route("coffee") }}' class='go-right'></a>
+
 <div class="container green">
 	<div class="main-container">
 		<div class="middle-main">

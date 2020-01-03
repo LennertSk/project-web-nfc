@@ -2,6 +2,9 @@
 
 @section('content')
 
+<a href='{{ route("dashboard") }}' class='go-left'></a>
+<a href='{{ route("plants") }}' class='go-right'></a>
+
 <div class="container blue">
 	<div class="main-container">
 		<div class="middle-main">
