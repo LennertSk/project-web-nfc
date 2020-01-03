@@ -23,4 +23,8 @@ class IndexController extends Controller
       return view('confirm', ['current_date' => $current_date, 'username' => $username_cookie]);
     }
   }
+  public function info(){
+    $current_date = Carbon::now();
+    return view('tutorial', ['current_date' => $current_date, 'hideSettings' => true]);
+  }
 }

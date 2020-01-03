@@ -11,6 +11,7 @@
 |
 */
 Route::get('/', 'IndexController@index');
+Route::get('/info', 'IndexController@info');
 
 
 Route::post('/login/check', 'LoginController@index');

@@ -603,3 +603,37 @@ nav .nav-main .nav-item-menu {
   left: 0px;
 }
 
+.wrapper-info {
+  padding-top: 100px;
+  width: 80%;
+  margin: auto;
+  color: #fff;
+}
+
+.info-text {
+  text-align: left;
+  line-height: 1.5;
+}
+
+.container-info {
+  background: #415948;
+}
+
+.mark {
+  color: #F29999;
+}
+
+.right-text {
+  text-align: right;
+  margin: 40px 0;
+}
+
+.info-btn {
+  padding: 10px;
+  background: #fff;
+  color: #415948;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+

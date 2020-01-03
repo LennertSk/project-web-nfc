@@ -68,7 +68,7 @@ class LoginController extends Controller
           }
           $cookie_username = cookie('username', $validatedData['username'], 45000);
           $isNewUser = true;
-          return redirect('/')->withCookie($cookie_username);
+          return redirect('info')->withCookie($cookie_username);
           break;
       }    
     }
