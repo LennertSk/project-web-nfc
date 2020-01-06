@@ -15,6 +15,10 @@
   overflow: hidden;
 }
 
+.settings-container {
+  min-height: 100vh;
+}
+
 .main-container {
   position: relative;
   z-index: 3;
@@ -431,7 +435,7 @@ nav .nav-main .nav-item-menu {
 
 .container-home {
   background: #8AA692;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .container-home .wrapper-home {
@@ -477,11 +481,12 @@ nav .nav-main .nav-item-menu {
 
 .container-dashboard {
   background: #93BDAB;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .container-dashboard .wrapper-main {
   padding-top: 40px;
+  padding-bottom: 20px;
   width: 100%;
   text-align: center;
   margin: auto;
@@ -605,6 +610,7 @@ nav .nav-main .nav-item-menu {
 
 .wrapper-info {
   padding-top: 100px;
+  padding-bottom: 50px;
   width: 80%;
   margin: auto;
   color: #fff;
@@ -616,6 +622,7 @@ nav .nav-main .nav-item-menu {
 }
 
 .container-info {
+  min-height: 100%;
   background: #415948;
 }
 

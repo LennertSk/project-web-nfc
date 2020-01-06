@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container container-home container-info">
+<div class="container-home container-info">
 	<div class="wrapper-info">
 		<h1>Let's get started</h1>
 		<br>

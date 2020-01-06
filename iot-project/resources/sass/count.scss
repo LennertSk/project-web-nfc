@@ -21,6 +21,10 @@ $darkgreen: #407844;
 	max-height: 100vh;
 	overflow: hidden;
 }
+
+.settings-container {
+	min-height: 100vh;
+}
 .main-container {
 	position: relative;
 	z-index: 3;

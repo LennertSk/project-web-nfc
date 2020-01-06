@@ -5,7 +5,7 @@
 <a href='{{ route("settings") }}' class='go-left'></a>
 <a href='{{ route("water") }}' class='go-right'></a>
 
-<div class="container container-dashboard">
+<div class="container-dashboard">
 	<div class="wrapper-main">
 		<div class="dashboard-value">
 			<h1>Your daily score:</h1>

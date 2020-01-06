@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container container-home container-welcome ">
+<div class="container-home container-welcome ">
 	<div class="wrapper-home">
 		<form method="POST" action="{{ url('login/check') }}" class="form-login">
 			<h1>Welcome!</h1>

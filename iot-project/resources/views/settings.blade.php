@@ -3,7 +3,7 @@
 @section('content')
 
 
-<div class="container">
+<div class="settings-container">
 	<div class="slidecontainer">
 		<form action="{{ url('settings/update') }}">
 			<hr>

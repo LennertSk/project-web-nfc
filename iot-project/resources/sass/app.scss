@@ -65,7 +65,7 @@ nav {
 // Index Screen ( after login )
 .container-home {
 	background: #8AA692;
-	height: 100vh;
+	min-height: 100vh;
 	.wrapper-home {
 		padding-top: 100px;
 		width: 80%;
@@ -105,10 +105,11 @@ nav {
 }
 .container-dashboard {
 	background: #93BDAB;
-	height: 100vh;
+	min-height: 100vh;
 
 	.wrapper-main {
 		padding-top: 40px;
+		padding-bottom: 20px;
 		width: 100%;
 		text-align: center;
 		margin: auto;
@@ -211,6 +212,7 @@ nav {
 // Info screen
 .wrapper-info {
 	padding-top: 100px;
+	padding-bottom: 50px;
 	width: 80%;
 	margin: auto;
 	color: #fff;
@@ -220,6 +222,7 @@ nav {
 	line-height: 1.5;
 }
 .container-info {
+	min-height: 100%;
 	background: #415948;
 }
 .mark {
