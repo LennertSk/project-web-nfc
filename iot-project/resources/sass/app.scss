@@ -64,66 +64,97 @@ nav {
 
 // Index Screen ( after login )
 .container-home {
-	background: #8AA692;
+	background: #93BDAB;
 	min-height: 100vh;
 	.wrapper-home {
 		padding-top: 100px;
-		width: 80%;
+		width: 100%;
 		text-align: center;
 		margin: auto;
-		color: #fff;
-	}
-	.home-username {
-		width: 50%;
-		margin: auto;
-		padding: 10px;
-		border: 1px solid #fff;
-		margin-bottom: 20px;
-	}
-	.home-logout {
-		margin-bottom: 80px;
-		a { 
-			color: #fff; 
-			text-decoration: none;
+		color: #000;
+		.home-div {
+			margin: 0 15px;
+			background-color: #fff;
+			box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03), 0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03), 0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05), 0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
+			border-radius: 10px;
+
+			.home-info {
+				padding: 1.5rem;
+			}
+
+			.home-p {
+				color: #000;
+				font-weight: bold;
+			}
+			.home-username {
+				width: 50%;
+				padding: 10px;
+				border: 1px solid #000;
+				margin: auto;
+				margin-bottom: 20px;
+				font-weight: bold;
+			}
+			.home-logout {
+				margin-bottom: 80px;
+				a { 
+					color: #93BDAB; 
+					text-decoration: none;
+				}
+			}
+			.home-btn {
+				width: 100%;
+    			padding: 10px 70px;
+    			background-color: #415948;
+    			color: #fff;
+    			border: 3px solid #415948;
+				border-radius: 50px;
+    			font-family: 'Open Sans', sans-serif;
+				font-size: 16px;
+				text-decoration: none;
+				font-weight: bold;
+			}
 		}
-	}
-	.home-btn {
-		width: 50%;
-		margin: auto;
-		background:#fff;
-		border: 1px solid #8AA692;
-		padding: 10px;
-		color: #8AA692;
-		text-decoration: none;
-		display: block;
 	}
 }
 
 // Login Form ( WELCOME.BLADE )
-.container-welcome {
-	background: #415948;
 
-}
 .submit-btn {
-	width: 60%;
-	margin: auto;
-	background:#fff;
-	border: 1px solid #415948;
-	padding: 10px;
-	color: #415948;
+	width: 70%;
+	padding: 10px 70px;
+	background-color: #415948;
+	color: #fff;
+	border: 3px solid #415948;
+	border-radius: 50px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
 	text-decoration: none;
-	display: block;
-	margin-top: 20px;
+	font-weight: bold;
+}
+.submit-btn-register {
+	width: 70%;
+	padding: 10px 70px;
+	background-color: #93BDAB;
+	color: #fff;
+	border: 3px solid #93BDAB;
+	border-radius: 50px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	text-decoration: none;
+	font-weight: bold;
+}
+.login-button {
+	margin: 10px 0;
 }
 .login-input-field {
 	width: 80%;
 	padding: 10px;
-	border: none;
+	border: 1px solid #000;
 	text-align: center;
 	margin-top: 20px;
 	color: #415948;
 	font-weight: bold;
-	margin-bottom: 20px;
+	margin-bottom: 50px;
 }
 
 // Side Navigation
@@ -153,10 +184,7 @@ nav {
 	text-align: left;
 	line-height: 1.5;
 }
-.container-info {
-	min-height: 100%;
-	background: #415948;
-}
+
 .mark {
 	color: #F29999;
 }
@@ -164,13 +192,20 @@ nav {
 	text-align: right;
 	margin: 40px 0;
 }
+.info-div-btn {
+	text-align: center;
+}
 .info-btn {
-	padding: 10px;
-	background: #fff;
-	color: #415948;
-	text-decoration: none;
-	text-transform: uppercase;
-	margin-top: 20px;
+	width: 100%;
+    			padding: 10px 70px;
+    			background-color: #fff;
+    			color: #415948;
+    			border: 3px solid #fff;
+				border-radius: 50px;
+    			font-family: 'Open Sans', sans-serif;
+				font-size: 16px;
+				text-decoration: none;
+				font-weight: bold;
 }
 
 
@@ -198,26 +233,26 @@ nav {
 			.dashboard-value-water {
 				padding: 0.75rem 1.5rem;
 				.value-link-wrapper {
-					color: #000;
+					color: $darkblue;
 					text-decoration: none;
+					font-weight: bold;
 				}
 			}
 			.dashboard-value-plants {
 				padding: 0.75rem 1.5rem;
 				.value-link-wrapper {
-					color: #000;
+					color: $darkgreen;
 					text-decoration: none;
+					font-weight: bold;
 				}
 			}
 			.dashboard-value-coffee {
 				padding: 0.75rem 1.5rem;
 				.value-link-wrapper {
-					color: #000;
+					color: $darkbrown;
 					text-decoration: none;
+					font-weight: bold;
 				}
-			}
-			.value-header {
-				text-transform: uppercase;
 			}
 		}
 		.margin-values {
@@ -266,9 +301,9 @@ nav {
     		a {
 				width: 100%;
     			padding: 10px 70px;
-    			background-color: #93BDAB;
+    			background-color: #415948;
     			color: #fff;
-    			border: 3px solid #93BDAB;
+    			border: 3px solid #415948;
 				border-radius: 50px;
     			font-family: 'Open Sans', sans-serif;
 				font-size: 16px;

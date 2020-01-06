@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container-home container-info">
+<div class="container-home">
 	<div class="wrapper-info">
 		<h1>Let's get started</h1>
 		<br>
@@ -13,7 +13,9 @@
 			<br>
 			<p class='left-text'>Happy tracking!</p>
 			<br>
-			<a class='info-btn' href='{{ url("/") }}'>Continue</a>
+			<div class="info-div-btn">
+				<a class='info-btn' href='{{ url("/") }}'>Continue</a>
+			</div>
 		</div>
 		
 	</div> 
