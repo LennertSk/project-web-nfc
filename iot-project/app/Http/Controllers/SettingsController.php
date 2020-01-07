@@ -10,14 +10,9 @@ use Illuminate\Support\Facades\Cookie;
 
 class SettingsController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('checkLogin');
     }
     
     public function index() {

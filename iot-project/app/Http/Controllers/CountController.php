@@ -10,15 +10,11 @@ use DateTime;
 use Carbon\Carbon;
 
 class CountController extends Controller
-{
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
+{   
+    
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('checkLogin');
     }
 
     public function dashboard() {
