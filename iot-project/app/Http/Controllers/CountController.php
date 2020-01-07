@@ -11,6 +11,15 @@ use Carbon\Carbon;
 
 class CountController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     public function dashboard() {
     	$username = Cookie::get('username');
