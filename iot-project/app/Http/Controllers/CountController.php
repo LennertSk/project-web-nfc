@@ -14,7 +14,7 @@ class CountController extends Controller
     
     public function __construct()
     {
-        $this->middleware('checkLogin');
+        $this->middleware('CheckLogin');
     }
 
     public function dashboard() {
