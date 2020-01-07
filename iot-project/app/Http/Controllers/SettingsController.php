@@ -12,7 +12,7 @@ class SettingsController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('checkLogin');
+        $this->middleware('CheckLogin');
     }
     
     public function index() {
